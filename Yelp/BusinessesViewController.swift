@@ -16,6 +16,12 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let searchBar = UISearchBar()
+        searchBar.sizeToFit()
+        searchBar.backgroundColor = UIColor.red
+        navigationItem.titleView = searchBar
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
